@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --legal-blue: #1e3a8a;
+  --legal-dark: #1e293b;
+  --legal-gold: #fbbf24;
+  --legal-light: #f8fafc;
+  --legal-gray: #64748b;
+  --legal-border: #e2e8f0;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--legal-light);
+  color: var(--legal-dark);
+  line-height: 1.6;
+}
+
+/* Legal Typography */
+.legal-serif {
+  font-family: 'Georgia', serif;
+}
+
+/* Custom Components */
+.legal-card {
+  @apply bg-white rounded-lg shadow-md border border-legal-border p-6;
+}
+
+.legal-button-primary {
+  @apply bg-legal-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition-colors duration-200;
+}
+
+.legal-button-secondary {
+  @apply bg-white text-legal-blue border-2 border-legal-blue px-6 py-3 rounded-lg font-medium hover:bg-legal-light transition-colors duration-200;
+}
+
+.legal-input {
+  @apply w-full px-4 py-3 border border-legal-border rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue focus:border-transparent;
+}
+
+.legal-textarea {
+  @apply w-full px-4 py-3 border border-legal-border rounded-lg focus:outline-none focus:ring-2 focus:ring-legal-blue focus:border-transparent resize-none;
+}
+
+/* Chat Styles */
+.chat-container {
+  @apply flex flex-col h-full bg-white rounded-lg shadow-lg border border-legal-border;
+}
+
+.chat-messages {
+  @apply flex-1 overflow-y-auto p-4 space-y-4;
+}
+
+.chat-message {
+  @apply max-w-3xl;
+}
+
+.chat-message.user {
+  @apply ml-auto;
+}
+
+.chat-message.assistant {
+  @apply mr-auto;
+}
+
+.chat-bubble {
+  @apply px-4 py-3 rounded-lg;
+}
+
+.chat-bubble.user {
+  @apply bg-legal-blue text-white;
+}
+
+.chat-bubble.assistant {
+  @apply bg-legal-light text-legal-dark border border-legal-border;
+}
+
+/* Loading Animation */
+.typing-indicator {
+  @apply flex space-x-1;
+}
+
+.typing-dot {
+  @apply w-2 h-2 bg-legal-gray rounded-full animate-pulse;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* File Upload Styles */
+.upload-area {
+  @apply border-2 border-dashed border-legal-border rounded-lg p-8 text-center hover:border-legal-blue transition-colors duration-200;
+}
+
+.upload-area.dragover {
+  @apply border-legal-blue bg-legal-light;
+}
+
+/* Source Citation Styles */
+.source-citation {
+  @apply bg-legal-light border-l-4 border-legal-gold p-3 mt-2 rounded;
+}
+
+.source-citation-title {
+  @apply font-medium text-legal-dark mb-1;
+}
+
+.source-citation-content {
+  @apply text-sm text-legal-gray;
+}
+
+/* Navigation Styles */
+.nav-link {
+  @apply text-legal-gray hover:text-legal-blue transition-colors duration-200 font-medium;
+}
+
+.nav-link.active {
+  @apply text-legal-blue;
+}
+
+/* Hero Section */
+.hero-gradient {
+  background: linear-gradient(135deg, var(--legal-blue) 0%, #2563eb 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .legal-card {
+    @apply p-4;
+  }
+  
+  .legal-button-primary,
+  .legal-button-secondary {
+    @apply px-4 py-2 text-sm;
+  }
+  
+  .chat-container {
+    @apply h-[calc(100vh-200px)];
+  }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--legal-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--legal-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--legal-blue);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Utility Classes */
+.text-legal-gold {
+  color: var(--legal-gold);
+}
+
+.bg-legal-gold {
+  background-color: var(--legal-gold);
+}
+
+.border-legal-gold {
+  border-color: var(--legal-gold);
+}

@@ -1,0 +1,44 @@
+# Core Flask and Web
+Flask>=3.0.0
+Flask-CORS>=4.0.0
+Werkzeug>=3.0.0
+
+# LangChain and AI/ML (Updated versions)
+langchain>=0.1.0
+langchain-community>=0.0.13
+langchain-groq>=0.1.0
+langchainhub>=0.1.14
+
+# Vector Database and Embeddings
+faiss-cpu>=1.8.0
+sentence-transformers>=2.2.2
+transformers>=4.36.2
+torch>=2.2.0
+
+# Document Processing
+PyPDF2>=3.0.1
+python-docx>=1.1.0
+pypdf>=3.17.1
+pdfplumber>=0.10.0
+
+# Environment and Configuration
+python-dotenv>=1.0.0
+pydantic>=2.5.3
+
+# HTTP and API
+requests>=2.31.0
+urllib3>=2.1.0
+
+# Utilities
+numpy>=1.24.3
+pandas>=2.1.4
+tqdm>=4.66.1
+
+# Logging and Monitoring
+colorlog>=6.8.0
+
+# Development and Testing
+pytest>=7.4.3
+pytest-flask>=1.2.0
+black>=23.12.1
+flake8>=7.0.0
